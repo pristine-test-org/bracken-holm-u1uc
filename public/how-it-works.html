@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How the list works · Bracken Holm</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header a { color: #2f7d4f; }
+      main { padding: 1.25rem 0; }
+      .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1rem; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 1rem 0;
+        background: linear-gradient(90deg, #2f7d4f, #3b6fd1);
+        -webkit-background-clip: text; background-clip: text;
+        color: transparent; -webkit-text-fill-color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: hard-coded colour outside the site's palette. */
+      .steps { display: grid; gap: 0.75rem; padding: 0; list-style: none; }
+      .steps li { padding: 0.9rem 1rem; border-radius: 0.5rem; background: #ffe14d; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .more { font-size: 10px; color: #2f7d4f; }
+      /* Intentional, for Impeccable's test drive: low-contrast text in light grey. */
+      .note { color: #c8c8c8; }
+      /* Intentional, for Impeccable's test drive: transition on a layout property. */
+      .bar { height: 0.6rem; width: 40%; background: #2f7d4f; border-radius: 0.3rem; transition: width 0.3s; }
+      .bar:hover { width: 90%; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+      .edge { margin: 0; padding: 0; max-width: none; line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">Bracken Holm</a>
+    </header>
+    <main>
+      <div class="wrap">
+        <h1>How the list works</h1>
+        <ol class="steps">
+          <li>Anyone on the team adds an item to the shared list.</li>
+          <li>The landing page reads the five newest items each time it loads.</li>
+          <li>Finished items are marked with a check so they are easy to spot.</li>
+        </ol>
+        <p class="note">Items usually show up within a few seconds of being added.</p>
+        <div class="bar" role="presentation"></div>
+        <p><a class="more" href="/">Back to the landing page</a></p>
+      </div>
+      <p class="edge">The list is shared across the whole team, so what you see on the landing page is what everyone else sees too, in the same order.</p>
+    </main>
+    <footer>Bracken Holm</footer>
+  </body>
+</html>
